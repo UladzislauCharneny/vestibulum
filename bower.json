@@ -1,0 +1,21 @@
+{
+  "name": "vestibulum",
+  "version": "0.0.0",
+  "authors": [
+    "Vladislav Chernyony <chernyony2010@gmail.com>"
+  ],
+  "description": "test template",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}
