@@ -1,102 +1,133 @@
+@import "variables-main";
+
+@mixin menulink($bg, $border, $pointer) {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 6px 15px 6px 32px;
+    border-radius: 4px;
+    border-bottom: 3px solid $green-main-light;
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+    &:hover {
+        box-sizing: border-box;
+        background-color: $bg;
+        border-bottom: 3px solid $border;
+        &:before {
+            display: $pointer;
+        }
+    }
+    &:before {
+        @include menu-pointer;
+        display: none;
+        top: 10px;
+        left: 17px;
+        content: "";
+        border-bottom: 2px solid white;
+    }
+}
+
+@mixin menu-pointer {
+    position: absolute;
+    content: "";
+    transform: rotate(45deg);
+    width: 4px;
+    height: 4px;
+    border-right: 2px solid white;
+}
+
 .header {
-	height: 80px;
-	background-color: #70c570;
+    height: 80px;
+    background-color: $green-main-light;
 }
 
 .header__logo {
-	margin: 20px 145px 0 155px;
-	font-size: 25px;
-	color: white;
-	display: inline-block;
-	font-weight: normal;
+    margin: 20px 140px 0 155px;
+    font-size: 25px;
+    color: white;
+    display: inline-block;
+    font-weight: normal;
 }
 
 .header-menu-wrapper {
-	display: inline-block;
+    display: inline-block;
+    margin-left: 50px;
 }
 
 .header__menu {
-	display: inline-block;
-	margin: 0px;
-
+    display: inline-block;
+    margin: 0px;
 }
 
 .menu__item {
-	display: inline-block;
-	position: relative;
-	margin-right: 15px;
-	list-style: none;
-
-	&:nth-child(1) {
-		.menu__link {
-			&:hover {
-				background-color: #60A15F;
-			}
-		}
-	}
-
-	
-
-	&:hover {
-		.header__submenu {
-			display: block;
-		}
-	}
-
-
+    display: inline-block;
+    position: relative;
+    margin-right: 0px;
+    list-style: none;
+    &:nth-child(1) {
+        .menu__link {
+            @include menulink($green-main, $green-main-dark, none);
+            padding-left: 15px;
+        }
+    }
+    &:hover {
+        .header__submenu {
+            display: block;
+        }
+    }
 }
 
 .menu__link {
-	position: relative;
-	display: inline-block;
-	box-sizing: border-box;
-	padding: 8px 5px 8px 26px;
-	border-radius: 4px;
-	text-decoration: none;
-	font-size: 13px;
-	color: white;
-	&:hover {
-		background-color: #E76A27;
-		&:before {
-			display: inline-block;
-		}
-	}
-	&:before{
-		position: absolute;
-		left: 14px;
-		top: 6px;
-		display: none;
-		content: "";
-		vertical-align: top;
-		margin-top: 6px;
-		transform: rotate(45deg);
-		width: 4px;
-		height: 4px;
-		border-bottom: 2px solid white;
-		border-right: 2px solid white;
-		margin-right: 15px;
-	}
+    @include menulink($orange-main, $orange-main-dark, inline-block);
 }
+
 .header__submenu {
-	position: absolute;
-	/*display: none;*/
-	margin: 0px;
-	margin-top:10px;
-	padding: 0px;
-	background: #E76A27;
-	border-radius: 4px;
-	padding: 4px 4px 0px 4px;
+    position: absolute;
+    display: none;
+    margin: 13px 0 0 0;
+    padding: 0px;
+    background: $orange-main;
+    border-radius: 4px;
+    padding: 4px 4px 0px 4px;
+    &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        top: -4px;
+        left: 15px;
+        background-color: $orange-main;
+        transform: rotate(45deg);
+    }
 }
 
 .submenu__item {
-	list-style: none;
-	margin-bottom:5px;
-	padding: 3px 10px 3px 10px;
-	border-radius: 4px;
-	background: #D86E3E;
+    list-style: none;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    background: #E05627;
 }
 
-.submenu__link{
-	text-decoration: none;
-	color: white;
+.submenu__link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 7px 10px 8px 27px;
+    background: #E06A3C;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 13px;
+    &:hover {
+        background: $green-main-light;
+    }
+    &:before {
+        @include menu-pointer;
+        display: block;
+        top: 12px;
+        left: 11px;
+        border-top: 2px solid white;
+    }
 }
