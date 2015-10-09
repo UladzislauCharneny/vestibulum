@@ -1,0 +1,42 @@
+@import 'z-indexes';
+@import 'variables-main';
+
+.slider__description {
+	position: absolute;
+	z-index: $z-index-upper;
+	left: 50%;
+	top:50%;
+	width: 430px;
+	height: 120px;
+	margin-left: -215px;
+	margin-top: -80px;
+}
+.description__header {
+	display: block;
+	height: 53px;
+    width: 310px;
+    padding: 0 3px 0 5px;
+    margin: 0 auto 0;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    background-color: $orange-main;
+    border-radius: 5px; 
+}
+.description__paragraf {
+    display: block;
+    box-sizing: border-box;
+    width: 430px;
+    height: 65px;
+    padding: 10px 20px 0 20px;
+    height: 65px;
+    margin: 3px auto 0;
+    background-color: black;
+    opacity: .5;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
+
+

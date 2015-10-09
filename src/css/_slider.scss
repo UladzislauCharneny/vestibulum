@@ -5,7 +5,7 @@
 #slide2:checked ~ .slider__slides>.slides__slide2,
 #slide3:checked ~ .slider__slides>.slides__slide3 {
 	opacity: 1;
-	z-index: $z-index-upper;
+	z-index: $z-index-front;
 	transform: scale(1);
 }
 
