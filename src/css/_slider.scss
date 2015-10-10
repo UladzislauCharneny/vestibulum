@@ -17,7 +17,7 @@
 }
 
 .slider__slides {
-	background-color: #ddd;
+	background-color: $gray-main-light;
 	height: inherit;
 	overflow: hidden;
 	position: relative;
@@ -55,11 +55,11 @@
     height: 4px;
     margin: 0px 4px 0 0px;
     width: 54px;
-    background: green;
+    background: $gray-main;
 }
 
 .slider__label:hover, 
 #slide1:checked ~ .slider__controls label:nth-of-type(1),
 #slide2:checked ~ .slider__controls label:nth-of-type(2),
 #slide3:checked ~ .slider__controls label:nth-of-type(3){
-	background: #ddd;}
+	background: $orange-main;}

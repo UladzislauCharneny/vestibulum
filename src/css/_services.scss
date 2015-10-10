@@ -1,0 +1,100 @@
+@import 'variables-main';
+
+@mixin service-button($disp, $bg, $brdr,$bg-hover,$brdr-hover){
+	display: $disp;
+	box-sizing: border-box;
+	width: 176px;
+	height: 48px;
+	padding-top: 13px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	background-color: $bg;
+	border-bottom: 3px solid $brdr;
+	&:hover {
+		background-color: $bg-hover;
+		border-color: $brdr-hover;
+	}
+}
+
+.services {
+	width: inherit;
+	margin-top: 45px;
+}
+
+.services__wrapper {
+	width: 1050px;
+	margin: auto;
+	color: $gray-main-dark;
+}
+
+.services__introduction {
+	width: initial;
+	padding: 20px 30px 20px 25px;
+	border-radius: 5px;
+	background-color: $gray-main-light;
+}
+
+.introduction__description {
+	display: inline-block;
+	width: 750px;
+}
+
+.introduction__description__header { 
+	font-weight: normal;
+}
+
+.introduction__description__paragraf {
+	margin-top: 8px;
+	font-size: 12px;
+}
+
+.button_introduction {
+	@include service-button(inline-block, $orange-main, $orange-main-dark, $green-main, $green-main-dark);
+	margin: 0 0 0 60px;
+	vertical-align: top;
+}
+
+.services__items-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: inherit;
+	margin-top: 40px;
+}
+
+.services__item {
+	position: relative;
+	display: inline-block;
+	height: 280px;
+	width: 240px;
+	border-radius: 5px;
+	background-color: #FFF;
+}
+
+.item__icon {
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	margin: 50px auto 0px auto;
+}
+
+.item__header {
+	margin-top: 12px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.item__description {
+	margin-top: 25px;
+	padding: 0 10px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.item__button {
+	@include service-button(block, $green-main, $green-main-dark, $orange-main, $orange-main-dark);
+	position: absolute;
+	left: 50%;
+	bottom: -30px;
+	margin-left: -88px;
+}
