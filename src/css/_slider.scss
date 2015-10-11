@@ -1,13 +1,7 @@
 @import 'z-indexes';
 @import 'slider-description';
 
-#slide1:checked ~ .slider__slides>.slides__slide1,
-#slide2:checked ~ .slider__slides>.slides__slide2,
-#slide3:checked ~ .slider__slides>.slides__slide3 {
-	opacity: 1;
-	z-index: $z-index-front;
-	transform: scale(1);
-}
+
 
 .slider {
 	height: 450px;
@@ -37,9 +31,9 @@
 	transform: scale(1.5);
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
-.slides__slide1 { background: url(.././img/slides--image-2.jpg) /*50% 50% no-repeat*/; }
-.slides__slide2 { background: url(.././img/slides--image-2.jpg) /*50% 50% no-repeat*/; }
-.slides__slide3 { background: url(.././img/slides--image-2.jpg) /*50% 50% no-repeat*/; }
+.slides__slide1 { background: url(.././img/slides--image-2.jpg) 50% 50% no-repeat; }
+.slides__slide2 { background: url(.././img/slides--image-2.jpg) 50% 50% no-repeat; }
+.slides__slide3 { background: url(.././img/slides--image-2.jpg) 50% 50% no-repeat; }
 
 .slider__controls {
 	left: 50%;
@@ -63,3 +57,11 @@
 #slide2:checked ~ .slider__controls label:nth-of-type(2),
 #slide3:checked ~ .slider__controls label:nth-of-type(3){
 	background: $orange-main;}
+
+#slide1:checked ~ .slider__slides>.slides__slide1,
+#slide2:checked ~ .slider__slides>.slides__slide2,
+#slide3:checked ~ .slider__slides>.slides__slide3 {
+	opacity: 1;
+	z-index: $z-index-front;
+	transform: scale(1);
+}

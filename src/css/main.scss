@@ -2,6 +2,8 @@
 @import 'z-indexes';
 @import 'header';
 @import 'services';
+@import 'reasons-slider';
+@import 'reasons';
 
 body{
 	margin: 0;
@@ -10,7 +12,7 @@ body{
 	background-color: $bg-main;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p,  ul{
 	margin: 0px;
 	padding: 0px;
 }

@@ -1,0 +1,37 @@
+@import 'variables-main';
+@import 'mixins';
+
+.reasons {
+	margin-top: 190px;
+}
+
+.reasons__wrapper {
+	width: 1050px;
+	margin: auto;
+	color: $gray-main-dark;
+}
+
+.reasons__reasons-list {
+	display: inline-block;
+	width: 200px;
+	margin-top: 30px;
+}
+
+.reasons__reasons-list__header {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.reasons__reasons-list__list {
+	margin: 0;
+}
+
+.list__item {
+	list-style: none;
+	margin-bottom: 9px;
+	font-size: 13px;
+	&:before {
+		@include menu-pointer($green-main);
+		border-bottom: 1px solid white;
+	}
+}
