@@ -4,12 +4,14 @@
 @import 'services';
 @import 'reasons-slider';
 @import 'reasons';
+@import 'footer';
 
 body{
 	margin: 0;
 	padding: 0;
 	font-family: tahoma;
 	background-color: $bg-main;
+	color: $gray-main-dark;
 }
 
 h1, h2, h3, p,  ul{

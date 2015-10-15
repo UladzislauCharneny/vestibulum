@@ -6,6 +6,8 @@
 }
 
 .reasons__wrapper {
+	display: flex;
+	justify-content: space-between;
 	width: 1050px;
 	margin: auto;
 	color: $gray-main-dark;
@@ -14,24 +16,164 @@
 .reasons__reasons-list {
 	display: inline-block;
 	width: 200px;
-	margin-top: 30px;
+	height: 200px;
 }
 
-.reasons__reasons-list__header {
+.reasons-list__header {
+	margin-bottom: 32px;
 	font-size: 15px;
 	font-weight: bold;
 }
 
-.reasons__reasons-list__list {
+.reasons-list__list {
 	margin: 0;
 }
 
 .list__item {
+	position: relative;
 	list-style: none;
-	margin-bottom: 9px;
+	margin-bottom: 8px;
+	margin-left: 15px;
 	font-size: 13px;
 	&:before {
 		@include menu-pointer($green-main);
-		border-bottom: 1px solid white;
+		border-top: 2px solid $green-main;
+		border-right: 2px solid $green-main;
+		left: -12px;
+		top: 5px;
+		width: 5px;
+		height: 5px;
 	}
+	&:after {
+		display: block;
+		content: "";
+	    width: 7px;
+	    height: 2px;
+	    position: absolute;
+	    left: -14px;
+	    bottom: 7px;
+	    background-color: $green-main;
+	}
+}
+
+.reasons__diagrams {
+	display: inline-block;
+	width: 550px;
+	height: 200px;
+}
+
+.diagrams__description {
+
+}
+
+.diagrams__description__paragraf {
+	font-size: 13px;
+	text-align: center;
+}
+
+.diagrams__wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 500px;
+	height: 90px;
+	margin:	auto;
+	margin-top: 60px;
+}
+
+.diagrams__diagram {
+	width: 110px;
+	height: inherit;
+}
+
+.diagram__window {
+	width: inherit;
+	height: 55px;
+	position: relative;
+	overflow: hidden;
+}
+
+.window__scale {
+	box-sizing: border-box;
+	width: inherit;
+	height: 110px;
+	position: absolute;
+	border-radius: 50%;
+	background: linear-gradient(to left, $green-main 50%, $orange-main 50%, $orange-main  100%);
+	//border: 10px solid transparent;
+	//border-image: linear-gradient(to left, $orange-main 50%, $green-main 50%, $green-main  100%);
+    //border-image-slice: 1;
+	background-color: black;
+}
+
+.diagram_2 .window__scale{
+	transform: rotate(40deg);
+}
+
+.diagram_3 .window__scale{
+	transform: rotate(55deg);
+}
+
+.diagram_4 .window__scale{
+	transform: rotate(90deg);
+}
+
+.scale__number {
+	width: 84px;
+	height: 84px;
+	position: absolute;
+	left: 13px;
+	top: 13px;
+	background-color: $bg-main;
+	border-radius: 50%;
+}
+
+.diagram__name {
+	text-align: center;
+	margin-top: 13px;
+	font-size: 14px;
+}
+
+.reasons__feedback {
+	width: 250px;
+}
+
+.feedback__header {
+	font-size: 14px;
+}
+
+.feedback__comment {
+	box-sizing: border-box;
+	width: 240px;
+	margin-left: 10px;
+	margin-top: 30px;
+	padding: 10px;
+	position: relative;
+	border-radius: 5px;
+	font-style: italic;
+	font-size: 13px;
+	background-color: white;
+	&:after {
+		content: "";
+		display: block;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		border-top: 25px solid white;
+		border-left: 25px solid transparent;
+	}
+
+}
+
+.comment__content {
+	font-size: 13px;
+}
+
+.feedback__author {
+	margin-left: 55px;
+	margin-top: 10px;
+	color: green;
+}
+
+.author__name {
+	font-size: 14px;
 }
