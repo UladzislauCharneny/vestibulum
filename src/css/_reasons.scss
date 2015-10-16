@@ -117,7 +117,7 @@
 	transform: rotate(90deg);
 }
 
-.scale__number {
+.window__number {
 	width: 84px;
 	height: 84px;
 	position: absolute;
@@ -125,6 +125,15 @@
 	top: 13px;
 	background-color: $bg-main;
 	border-radius: 50%;
+}
+
+.number__value {
+	display: block;
+	margin: 17px 0px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	color: $gray-main-dark;
 }
 
 .diagram__name {
