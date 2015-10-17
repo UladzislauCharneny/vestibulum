@@ -35,6 +35,7 @@
 
 .button_introduction {
 	@include service-button(inline-block, $orange-main, $orange-main-dark, $green-main, $green-main-dark);
+	@include active-link_yellow;
 	margin: 0 0 0 60px;
 	vertical-align: top;
 }
@@ -42,17 +43,18 @@
 .services__items-wrapper {
 	display: flex;
 	justify-content: space-between;
+	flex-flow: row wrap;
 	width: inherit;
 	margin-top: 40px;
 }
 
 .services__item {
 	position: relative;
-	display: inline-block;
 	height: 280px;
-	width: 240px;
+	min-width: 240px;
 	border-radius: 5px;
 	background-color: #FFF;
+	margin-bottom: 45px;
 }
 
 .item__icon {
@@ -69,6 +71,7 @@
 }
 
 .item__description {
+	max-width: 240px;
 	margin-top: 25px;
 	padding: 0 10px;
 	font-size: 13px;
@@ -81,4 +84,7 @@
 	left: 50%;
 	bottom: -30px;
 	margin-left: -88px;
+	transition: box-shadow .2s;
+	@include active-link_yellow;
+	
 }
